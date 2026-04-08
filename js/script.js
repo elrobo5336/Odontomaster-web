@@ -25,5 +25,5 @@ if (slides.length > 0) {
     setInterval(() => {
         index = (index + 1) % slides.length;
         showSlide(index);
-    }, 3000);
+    }, 4000);
 }
