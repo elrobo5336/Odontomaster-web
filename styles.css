@@ -22,6 +22,12 @@ body::before {
     left: 0;
     z-index: -1;
 }
+.menu-toggle {
+    display: none;
+    margin-left: auto;
+    font-size: 28px;
+    cursor: pointer;
+}
 
 @media (max-width: 1024px) {
     .hero, .doctor, .contact {
@@ -55,22 +61,45 @@ body::before {
 
 @media (max-width: 768px) {
     /* Navbar: Pasamos de Grid a Flex para mejor control */
-    .navbar {
-        display: flex;
+    .menu-toggle {
+        display: block;
+        color: white;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        transition: all 0.3s ease;
+        background: rgba(0,0,0,0.9);
+        display: none;
         flex-direction: column;
-        gap: 15px;
-        padding: 20px;
+        align-items: center;
+        justify-content: space-between;
+        max-height: 0;
+        overflow: hidden;
     }
 
-    .navbar nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+    nav a {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+        color: white;
     }
 
-    .btn-whatsapp {
-        justify-self: center; /* Centrar botón en móvil */
+    nav.active {
+        max-height: 300px; /* 🔥 se despliega */
+        display:flex;
+        flex-direction: column;
+    }
+
+
+    .btn-whatsapp,
+    button.btn-whatsapp {
+        display: none !important;
     }
 
     /* Secciones de servicios y testimonios */
@@ -131,10 +160,11 @@ body::before {
     height: 20px;
 }
 .navbar {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr auto 1fr;
     background: transparent;
     color:#ffffff;
+    justify-content: space-between;
     align-items: center;
     padding: 12px 5%;
     width: 100%;
@@ -225,8 +255,8 @@ body::before {
 .btn-outline,
 .btn-dark {
     background: transparent;              /* 🔥 transparente */
-    color: #4FC3F7;                        /* celeste */
-    border: 2px solid #4FC3F7;             /* borde celeste */
+    color: rgba(69, 111, 250, 1);                        /* celeste */
+    border: 2px solid rgba(69, 111, 250, 1);             /* borde celeste */
     padding: 10px 25px;
     border-radius: 8px;
     cursor: pointer;

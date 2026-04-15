@@ -14,25 +14,20 @@
   <body>
     <!-- NAVBAR -->
     <header class="navbar">
-      <div class="logo">ODONTO MASTER</div>
-      <nav>
+      <div class="logo">ODONTOMASTER</div>
+      <nav id="nav-menu">
         <a href="#">Inicio</a>
         <a href="servicios.html">Servicios</a>
         <a href="#">Nosotros</a>
         <a href="#">Contacto</a>
       </nav>
-      <button class="btn-whatsapp">
-        <a
-          href="https://wa.me/51910840567"
-          target="_blank"
-          class="btn-whatsapp"
-        >
-          <span class="icon">
-            <img src="whatsapp.png" alt="whatsapp" />
-          </span>
-          Whatsapp
-        </a>
-      </button>
+      <a href="https://wa.me/51910840567" target="_blank" class="btn-whatsapp">
+        <span class="icon">
+          <img src="whatsapp.png" alt="whatsapp" />
+        </span>
+        Whatsapp
+      </a>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
     </header>
 
     <!-- HERO -->
@@ -192,7 +187,11 @@
         <label>Telefono*</label>
         <input type="text" placeholder="Telefono" />
 
-        <button class="btn-dark">Agendar Cita</button>
+        <button class="btn-dark">
+          <a href="https://calendar.app.google/tppd3utqgFLSVqAQ8"
+            >Agendar Cita</a
+          >
+        </button>
       </form>
     </section>
 
