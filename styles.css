@@ -5,7 +5,7 @@
     font-family: Arial, sans-serif;
 }
 body{
-    background-image: url("imagenes/Fondo.jpg"); /* tu imagen */
+    background-image: url("imagenes/Fondomejorado.jpg"); /* tu imagen */
     background-size: cover;        /* 🔥 ocupa toda la pantalla */
     background-position: center;   /* centrada */
     background-repeat: no-repeat;  /* no se repite */
@@ -253,15 +253,17 @@ body::before {
 }   
 
 .btn-outline,
-.btn-dark {
+.btn-dark, .btn-dark a {
     background: transparent;              /* 🔥 transparente */
     color: rgba(69, 111, 250, 1);                        /* celeste */
     border: 2px solid rgba(69, 111, 250, 1);             /* borde celeste */
     padding: 10px 25px;
     border-radius: 8px;
     cursor: pointer;
-    
+    z-index: 10;
     transition: 0.3s;
+    text-decoration: none;
+    
 }
 
 .btn-outline:hover,
@@ -274,10 +276,10 @@ body::before {
     padding: 10px 50px;
 }
 
-.btn-dark a {
+/*.btn-dark a {
  text-decoration: none;
  color:white;
-}
+}*/
 
 .hero-image {
     position: absolute;
@@ -423,6 +425,7 @@ body::before {
     justify-content: space-between;
     align-items: center;
     padding: 40px 5%;
+    background: white;
 }
 
 .doctor-info {
@@ -439,22 +442,86 @@ body::before {
 }
 
 /* FORMULARIO */
-.contact {
+.contact-section {
     display: flex;
     justify-content: space-between;
-    padding: 40px 5%;
+    gap: 50px;
+    padding: 60px 10%;
+    background: transparent;
 }
 
+/* IZQUIERDA */
+.contact-info {
+    width: 40%;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.label {
+    color: #888;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.btn-map {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 8px 15px;
+    background: #2F80ED;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* DERECHA */
 .contact-form {
+    width: 55%;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+/* FILAS */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+/* CAMPOS */
+.form-group {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    width: 300px;
+    margin-bottom: 15px;
 }
 
-.contact-form input {
-    margin-bottom: 10px;
-    padding: 8px;
+.form-group.full {
+    width: 100%;
+}
+
+/* INPUTS */
+input, select {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    background: #eef1f5;
+}
+
+/* BOTÓN */
+.btn-submit {
+    margin-top: 10px;
+    padding: 12px 30px;
+    background: black;
+    color: white;
     border-radius: 20px;
+    border: none;
+    cursor: pointer;
 }
 
 .map {

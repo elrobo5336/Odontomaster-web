@@ -111,7 +111,7 @@
       </div>
       <br />
       <br />
-      <button class="btn-dark"><a href="servicios.html">Ver mas</a></button>
+      <a href="servicios.html" class="btn-dark">Ver mas</a>
     </section>
 
     <!-- ARTICLES -->
@@ -144,13 +144,26 @@
 
       <div class="testimonial-cards">
         <div class="testimonial">
-          <h4>John Doe ⭐⭐⭐⭐⭐</h4>
-          <p>Great service and friendly staff!</p>
+          <h4>Maria García ⭐⭐⭐⭐⭐</h4>
+          <p>
+            Excelente atención, el doctor fue muy profesional y me explicó todo
+            el tratamiento.
+          </p>
         </div>
 
         <div class="testimonial">
-          <h4>Jane Smith ⭐⭐⭐⭐⭐</h4>
-          <p>Best dental experience I've ever had!</p>
+          <h4>Carlos Ramirez ⭐⭐⭐⭐⭐</h4>
+          <p>
+            Me hice una limpieza dental y quedé muy satisfecho, todo fue rápido
+            y sin molestias.
+          </p>
+        </div>
+
+        <div class="testimonial">
+          <h4>Andrea Jimenez ⭐⭐⭐⭐⭐</h4>
+          <p>
+            Ahora puedo sonreír con confianza gracias al tratamiento que recibí.
+          </p>
         </div>
       </div>
     </section>
@@ -172,27 +185,64 @@
     </section>
 
     <!-- FORMULARIO -->
-    <section class="contact">
-      <div class="contact-text">
-        <h2>Request a Callback</h2>
-        <p>
-          Complete sus datos y nos pondremos en contacto con usted en breve.
-        </p>
+    <section class="contact-section">
+      <!-- IZQUIERDA -->
+      <div class="contact-info">
+        <h2>Visítanos</h2>
+
+        <p class="label">Ubicación</p>
+        <p>Av. Tupac Amaru - Nogales 105<br />Comas, Lima, Peru</p>
+
+        <a href="#" class="btn-map">¿Cómo llegar?</a>
+
+        <p class="label">Horario de Atención</p>
+        <p>Lunes a viernes:<br />9:00 am - 7:00 pm</p>
+
+        <p>Sábados:<br />9:00 am - 1:00 pm</p>
       </div>
 
-      <form class="contact-form">
-        <label>Nombre completo*</label>
-        <input type="text" placeholder="Nombre completo" />
+      <!-- DERECHA -->
+      <div class="contact-form">
+        <h2>¡Estás a un paso de transformar tu sonrisa!</h2>
 
-        <label>Telefono*</label>
-        <input type="text" placeholder="Telefono" />
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nombre</label>
+              <input type="text" placeholder="" />
+            </div>
 
-        <button class="btn-dark">
-          <a href="https://calendar.app.google/tppd3utqgFLSVqAQ8"
-            >Agendar Cita</a
-          >
-        </button>
-      </form>
+            <div class="form-group">
+              <label>Apellidos</label>
+              <input type="text" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Número de teléfono</label>
+              <input type="text" />
+            </div>
+
+            <div class="form-group">
+              <label>Correo *</label>
+              <input type="email" />
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label>Especialidades</label>
+            <select>
+              <option>Selecciona</option>
+              <option>Ortodoncia</option>
+              <option>Implantes</option>
+              <option>Limpieza</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-submit">Enviar</button>
+        </form>
+      </div>
     </section>
 
     <section class="map">
