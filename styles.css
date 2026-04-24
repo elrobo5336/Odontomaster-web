@@ -132,19 +132,18 @@ body::before {
     }
 
     /* Formulario de contacto */
-    .contact {
+    .contact-section {
         flex-direction: column;
-        gap: 30px;
     }
 
-    .contact-text {
-        text-align: center;
-    }
-
+    .contact-info,
     .contact-form {
         width: 100%;
     }
 
+    .form-row {
+        flex-direction: column;
+    }
     /* Footer */
     .footer {
         flex-direction: column;
@@ -338,18 +337,22 @@ body::before {
 .products {
     background: transparent;
     text-align: center;
-    padding: 50px 20px;
+    padding: 50px 30px;
+    
 }
 
 .product-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+   justify-items: center;
 }
 
 .card {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 250px;
     background: #f2f2f2;
     padding: 15px;
@@ -445,8 +448,10 @@ body::before {
 .contact-section {
     display: flex;
     justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
     gap: 50px;
-    padding: 60px 10%;
+    padding: 70px 0px;
     background: transparent;
 }
 
