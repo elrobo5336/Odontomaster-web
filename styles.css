@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-image: url("imagenes/Fondomejorado.jpg"); /* tu imagen */
     background-size: cover;        /* 🔥 ocupa toda la pantalla */
@@ -103,15 +106,57 @@ body::before {
     }
 
     /* Secciones de servicios y testimonios */
-    .product-cards, .testimonial-cards {
+    .testimonial-cards {
         flex-direction: column;
         align-items: center;
+    }
+    
+    .products .btn-dark {
+        display: none;
+    }
+    .product-cards{
+        display: none !important;
     }
 
     .card, .testimonial {
         width: 100%;
         max-width: 300px;
     }
+
+    .services-mobile {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .service-item {
+        text-align: center;
+        max-width: 350px;
+    }
+
+    .icon-circle {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 15px;
+        border-radius: 50%;
+        background: rgba(0, 150, 255, 0.1);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-circle img {
+        width: 40px;
+    }
+
+    .service-item a {
+        color: #00c853;
+        text-decoration: none;
+    }
+
 
     /* Artículos */
     .article {
@@ -132,13 +177,43 @@ body::before {
     }
 
     /* Formulario de contacto */
+
     .contact-section {
-        flex-direction: column;
+        flex-direction: column; /* 🔥 cambia a vertical */
+        padding: 30px 20px;
+        gap: 30px;
+        align-items: center;
     }
 
     .contact-info,
     .contact-form {
+        width: 100%; /* 🔥 ocupan todo */
+    }
+
+    /* FORMULARIO EN COLUMNA */
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* INPUTS MÁS CÓMODOS */
+    input,
+    select {
         width: 100%;
+        padding: 14px;
+        font-size: 16px; /* 🔥 evita zoom en iPhone */
+    }
+
+    /* BOTÓN GRANDE */
+    .btn-submit {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    /* TEXTO CENTRADO (opcional) */
+    .contact-info {
+        text-align: center;
     }
 
     .form-row {
@@ -168,7 +243,7 @@ body::before {
     padding: 12px 5%;
     width: 100%;
     z-index: 10;
-    position: absolute;
+    position: fixed;
     top:0;
      background: linear-gradient(
         to bottom,
@@ -344,7 +419,7 @@ body::before {
 .product-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
    justify-items: center;
@@ -372,26 +447,12 @@ body::before {
     display: block;
 }
 
-/* ARTICLES */
-.articles {
-    text-align: center;
-    padding: 50px 20px;
+.services-mobile {
+    display: none;
 }
 
-.article-list {
-    margin-top: 30px;
-}
+/* ARTICLES eleminado*/
 
-.article {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f7f7f7;
-    margin: 10px auto;
-    padding: 15px;
-    width: 60%;
-    gap: 15px;
-}
 
 .img-small {
     width: 60px;
@@ -406,6 +467,8 @@ body::before {
     justify-content: space-between;
     align-items: center;
     padding: 40px 5%;
+    background:white ;
+
 }
 
 .testimonial-cards {
@@ -416,7 +479,7 @@ body::before {
 }
 
 .testimonial {
-    background: #f2f2f2;
+    background: #8d8383;
     padding: 15px;
     width: 200px;
     border-radius: 5px;
@@ -428,7 +491,7 @@ body::before {
     justify-content: space-between;
     align-items: center;
     padding: 40px 5%;
-    background: white;
+    background: transparent;
 }
 
 .doctor-info {
@@ -445,6 +508,12 @@ body::before {
 }
 
 /* FORMULARIO */
+.contact-container{
+    width: 100%;
+    background: white;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 .contact-section {
     display: flex;
     justify-content: space-between;
